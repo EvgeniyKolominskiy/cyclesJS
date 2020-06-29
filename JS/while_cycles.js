@@ -20,6 +20,17 @@
 
 //Task 3
 
+function pow(base, extend) {
+ if (extend < 0) {
+ 	return 1 /pow(base, Math.abs(extend));
+ }
+ if (extend === 0) {
+ 	return  1;
+ }
+ return base * pow(base, extend - 1);
+}
+
+console.log(pow(4, 2));
 
 //Task 4
 
