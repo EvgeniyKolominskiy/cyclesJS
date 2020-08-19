@@ -13,41 +13,65 @@
 
 //Task 1
 
+const userNum = Number(prompt('Enter a number, please.'));
 
+let i = 0;
+while (i++ < userNum) {
+	console.log(`I printed the number ${userNum} times.`);
+}
 
 //Task 2
 
+i = userNum;
+
+while (i >= 0) {
+	console.log(i--);
+}
 
 //Task 3
 
-function pow(base, extend) {
- if (extend < 0) {
- 	return 1 /pow(base, Math.abs(extend));
- }
- if (extend === 0) {
- 	return  1;
- }
- return base * pow(base, extend - 1);
+const num = Number(prompt('Enter your number.'));
+const power = Number(prompt('Enter your power'));
+
+let result = num;
+i = 0;
+
+while (i++ < (power - 1)) {
+	result *= num;
 }
 
-console.log(pow(4, 2));
+console.log(`Your number is: ${result}.`);
 
 //Task 4
 
+const num1 = Number(prompt('Enter your first number, please.'));
+const num2 = Number(prompt('Enter your second number, please.'));
+
+i = 0;
+if (num1 < num2) {
+	i = num1;
+} else {
+	i = num2;
+}
+
+while (i > 0) {
+	if (num1 % i === 0 && num2 % i === 0) {
+		console.log(`Common divisor of higher numbers ${i}.`);
+	}
+	i--;
+}
 
 //Task 5
 
-const num = Number(prompt('Enter your factorial:'));
+const factorial = Number(prompt('Enter your factorial number, please.'));
 
-function fac(num) {
-	if (num < 0) {
-		return;
-	}
-	if (num <= 1) {
+function fac(n) {
+	if (n <= 1) {
 		return 1;
 	}
-	return num * fac(num - 1);
+	return n * fac(n - 1);
 }
 
-console.log(fac(num));
+console.log(fac(factorial));
+
 
